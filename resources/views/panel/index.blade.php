@@ -4,6 +4,8 @@
 <section class="panel-container">
 	<div class="container">
 		<h1 class="display-4">RESUMEN DE DATOS</h1>
+
+		<h3><strong><em>PACIENTES</em></strong></h3>
 		<div class="row">
 			<div class="col">
 				<div class="card border-info">
