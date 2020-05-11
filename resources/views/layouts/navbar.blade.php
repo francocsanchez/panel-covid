@@ -22,12 +22,12 @@
                         DATA
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('list.efectores')}}">Efectores</a>
-                        <a class="dropdown-item" href="{{route('list.estados-clinicos')}}">Estados Clinicos</a>
-                        <a class="dropdown-item" href="{{route('list.financiador')}}">Financiador</a>
-                        <a class="dropdown-item" href="{{route('list.fuentes')}}">Fuentes</a>
-                        <a class="dropdown-item" href="{{route('list.motivos')}}">Motivos</a>
-                        <a class="dropdown-item" href="{{route('list.pacientes')}}">Pacientes</a>
+                        <a class="dropdown-item" href="">Efectores</a>
+                        <a class="dropdown-item" href="">Estados Clinicos</a>
+                        <a class="dropdown-item" href="">Financiador</a>
+                        <a class="dropdown-item" href="">Fuentes</a>
+                        <a class="dropdown-item" href="">Motivos</a>
+                        <a class="dropdown-item" href="">Pacientes</a>
                     </div>
                 </li>
             </ul>
