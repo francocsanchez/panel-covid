@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="">INGRESO</a>
+                    <a href="{{ route('panel') }}">INGRESO</a>
                 </div>
             </div>
         </div>
