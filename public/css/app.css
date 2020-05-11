@@ -27,32 +27,16 @@
 	max-width: 55px;
 }
 
-#chart-llamados{
+.panel-container{
 	margin-top: 20px;
 }
 
-#chart-llamados h3{
-	color: rgb(12, 106, 88);
-	font-weight: bold;
-}
-
-.container-chart-llamados{
-	max-height: 200px;
-}
-
-#panel{
-	margin-top: 20px;
-}
-
-.card-panel{
+.panel-container h1{
+	color : rgb(12, 106, 88);
 	text-align: center;
-	padding-bottom: 1px;
-	padding-top: 5px;
 }
-.card-panel p{
-
-	font-size: 40px;
-}
-.listas {
-	margin-top: 20px;
+.card-header
+{
+	font-size: 30px;
+	padding: 0;
 }
