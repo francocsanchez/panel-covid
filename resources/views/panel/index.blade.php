@@ -22,7 +22,7 @@
 						<p class="card-text">Pacientes completos: <strong>{{$cant_pacientes_completos}}</strong></p>
 					</div>
 				</div>
-				<p class="text-right"><small><em>Efectividad de carga <strong>(%)</strong></em></small></p>
+				<p class="text-right"><small><em>Efectividad de carga <strong>{{efectidad($cant_pacientes,$cant_pacientes_completos)}}</strong></em></small></p>
 			</div>
 			<div class="col">
 				<div class="card border-danger">
@@ -31,7 +31,7 @@
 						<p class="card-text">Pacientes descartados: <strong>{{$cant_pacientes_incompletos}}</strong></p>
 					</div>
 				</div>
-				<p class="text-right"><small><em>Porcentaje de error <strong>(%)</strong></em></small></p>
+				<p class="text-right"><small><em>Porcentaje de error <strong>{{efectidad($cant_pacientes,$cant_pacientes_incompletos)}}</strong></em></small></p>
 			</div>
 		</div>
 		<hr>
@@ -58,7 +58,7 @@
 						<p class="card-text">Seguimientos completos: <strong>{{ $cant_seguimientos_completos }}</strong></p>
 					</div>
 				</div>
-				<p class="text-right"><small><em>Efectividad de carga <strong>(%)</strong></em></small></p>
+				<p class="text-right"><small><em>Efectividad de carga <strong>{{ efectidad($cant_seguimientos,$cant_seguimientos_completos) }}</strong></em></small></p>
 			</div>
 			<div class="col">
 				<div class="card border-danger">
@@ -67,7 +67,7 @@
 						<p class="card-text">Seguimientos descartados: <strong>{{ $cant_seguimientos_incompletos }}</strong></p>
 					</div>
 				</div>
-				<p class="text-right"><small><em>Porcentaje de error <strong>(%)</strong></em></small></p>
+				<p class="text-right"><small><em>Porcentaje de error <strong>{{ efectidad($cant_seguimientos,$cant_seguimientos_incompletos) }}</strong></em></small></p>
 			</div>
 		</div>
 	</div>
