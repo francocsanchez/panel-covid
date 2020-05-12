@@ -32,4 +32,9 @@ class PanelController extends Controller
 				'ultimo_seguimiento'
 			));
 	}
+
+	public function pacientes()
+	{
+		return view('panel.pacientes');
+	}
 }

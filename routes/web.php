@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 
 Route::get('/panel','PanelController@index')->name('panel');
+Route::get('/pacientes','PanelController@pacientes')->name('pacientes-panel');
