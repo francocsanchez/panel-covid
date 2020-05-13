@@ -7,4 +7,12 @@ function efectidad($total,$valor){
 	return $efectividad;
 }
 
+function tipoSexo($valor){
+	if($valor==0){
+		return "Feminino";
+	}else{
+		return "Masculino";
+	}
+}
+
 ?>

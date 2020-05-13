@@ -13,6 +13,8 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 <body>
@@ -25,6 +27,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels" charset="utf-8"></script>
     @yield('script')
 </body>
 </html>
