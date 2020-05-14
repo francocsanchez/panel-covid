@@ -3,72 +3,61 @@
 @section('content')
 <section class="panel-container">
 	<div class="container">
-		<h1 class="display-4">RESUMEN DE DATOS</h1>
-		<h3><strong><em>PACIENTES</em></strong></h3>
-		<div class="row">
-			<div class="col">
-				<div class="card border-info">
-					<div class="card-header text-white bg-info text-center">TOTAL</div>
-					<div class="card-body">
-						<p class="card-text">Pacientes ingresados: <strong>{{$cant_pacientes}}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Ultima carga <strong>{{ $ultimo_paciente }}</strong></em></small></p>
+		<div class="title">
+			<h1 class="display-4">RESUMEN DE DATOS</h1>
+			<p>ÚLTIMA CARGA: <strong>{{ fechaCarga($ultima_carga) }}</strong></p>
+		</div>
+		<div class="row" id="card-chart">
+			<div class="col card-total">
+				<h1 class="display-4">{{$cant_pacientes}}</h1>
+				<p>Pacientes ingresados</p>
 			</div>
-			<div class="col">
-				<div class="card border-success">
-					<div class="card-header text-white bg-success text-center">COMPLETOS</div>
-					<div class="card-body">
-						<p class="card-text">Pacientes completos: <strong>{{$cant_pacientes_completos}}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Efectividad de carga <strong>{{efectidad($cant_pacientes,$cant_pacientes_completos)}}</strong></em></small></p>
+			<div class="col card-completos">
+				<h1 class="display-4">{{$cant_pacientes_completos}}</h1>
+				<p>Pacientes con datos completos</p>
 			</div>
-			<div class="col">
-				<div class="card border-danger">
-					<div class="card-header text-white bg-danger text-center">INCOMPLETOS</div>
-					<div class="card-body">
-						<p class="card-text">Pacientes descartados: <strong>{{$cant_pacientes_incompletos}}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Porcentaje de error <strong>{{efectidad($cant_pacientes,$cant_pacientes_incompletos)}}</strong></em></small></p>
+			<div class="col card-incompletos">
+				<h1 class="display-4">{{$cant_pacientes_incompletos}}</h1>
+				<p>Pacientes con datos insuficientes</p>
 			</div>
 		</div>
-		<p><a href="{{ route('pacientes-panel') }}">Ver Graficos</a></p>
-		<hr>
+		<br>
+		<div class="row" id="card-estadistica">
+			<div class="col-3 offset-md-3 card-estadistica">
+				<h1 class="display-4">{{efectidad($cant_pacientes,$cant_pacientes_completos)}}</h1>
+				<p>EFECTIVIDAD DE CARGA</p>
+			</div>
+			<div class="col-3 card-estadistica">
+				<h1 class="display-4">{{efectidad($cant_pacientes,$cant_pacientes_incompletos)}}</h1>
+				<p>PORCENTAJE DE ERROR</p>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-6 offset-md-3 border border-success">
+				<h1 class="display-4"><a href="{{route('pacientes-panel')}}">Visualizar datos</a></h1>
+			</div>
+		</div>
 	</div>
+</div>
 </section>
 <section class="panel-container">
 	<div class="container">
-
-		<h3><strong><em>REGISTROS</em></strong></h3>
-		<div class="row">
-			<div class="col">
-				<div class="card border-info">
-					<div class="card-header text-white bg-info text-center">TOTAL</div>
-					<div class="card-body">
-						<p class="card-text">Seguimientos cargados: <strong>{{ $cant_seguimientos }}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Ultima carga <strong>{{ $ultimo_seguimiento }}</strong></em></small></p>
+		<div class="row card-seguimientos">
+			<div class="col-3 card-seguimiento-guia">
+				Seguimiento de llamados sobre {{$cant_pacientes_completos}} pacientes
 			</div>
-			<div class="col">
-				<div class="card border-success">
-					<div class="card-header text-white bg-success text-center">COMPLETOS</div>
-					<div class="card-body">
-						<p class="card-text">Seguimientos completos: <strong>{{ $cant_seguimientos_completos }}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Efectividad de carga <strong>{{ efectidad($cant_seguimientos,$cant_seguimientos_completos) }}</strong></em></small></p>
+			<div class="col card-tipos">
+				<h1 class="display-4">{{$seguimientos}}</h1>
+				<p>LLAMADOS REGISTRADOS</p>
 			</div>
-			<div class="col">
-				<div class="card border-danger">
-					<div class="card-header text-white bg-danger text-center">INCOMPLETOS</div>
-					<div class="card-body">
-						<p class="card-text">Seguimientos descartados: <strong>{{ $cant_seguimientos_incompletos }}</strong></p>
-					</div>
-				</div>
-				<p class="text-right"><small><em>Porcentaje de error <strong>{{ efectidad($cant_seguimientos,$cant_seguimientos_incompletos) }}</strong></em></small></p>
+			<div class="col card-tipos">
+				<h1 class="display-4">{{$seguimientos_respuesta}}</h1>
+				<p>RESPUESTAS REGISTRADOS</p>
+			</div>
+			<div class="col card-tipos">
+				<h1 class="display-4">{{$seguimientos_sin_respuesta}}</h1>
+				<p>LLAMADOS SIN RESPUESTAS</p>
 			</div>
 		</div>
 	</div>

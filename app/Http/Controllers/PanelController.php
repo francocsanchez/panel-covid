@@ -18,23 +18,21 @@ class PanelController extends Controller
 		$cant_pacientes = Paciente::count();
 		$cant_pacientes_completos = Paciente::Completos()->count();
 		$cant_pacientes_incompletos = $cant_pacientes - $cant_pacientes_completos;
-		$ultimo_paciente = Paciente::UltimaCarga();
+		$ultima_carga = Paciente::UltimaCarga();
 
-		$cant_seguimientos = Seguimiento::count();
-		$cant_seguimientos_completos = Seguimiento::Completos()->count();
-		$cant_seguimientos_incompletos = $cant_seguimientos - $cant_seguimientos_completos;
-		$ultimo_seguimiento = Seguimiento::UltimaCarga();
+		$seguimientos = Seguimiento::count();
+		$seguimientos_respuesta = Seguimiento::Atendio()->count();
+		$seguimientos_sin_respuesta = $seguimientos - $seguimientos_respuesta;
 
 		return view('panel.index'
 			,compact(
 				'cant_pacientes',
 				'cant_pacientes_completos',
 				'cant_pacientes_incompletos',
-				'ultimo_paciente',
-				'cant_seguimientos',
-				'cant_seguimientos_completos',
-				'cant_seguimientos_incompletos',
-				'ultimo_seguimiento'
+				'ultima_carga',
+				'seguimientos',
+				'seguimientos_respuesta',
+				'seguimientos_sin_respuesta',
 			));
 	}
 
@@ -175,7 +173,7 @@ class PanelController extends Controller
 			'tooltips' => ['enabled'=>true],
 			'legend' => [
 				'display' => true,
-				'position' => 'bottom',
+				'position' => 'left',
 				'Align' =>	'end',
 			],
 			'scales' => [
@@ -205,13 +203,13 @@ class PanelController extends Controller
 
 		$fuenteChart = new PacienteLocalidadChart;
 		$fuenteChart->labels($labels4);
-		$fuenteChart->dataset('Cantidad', 'horizontalBar', $dataset4)->options([
+		$fuenteChart->dataset('Cantidad', 'bar', $dataset4)->options([
 			'borderColor'=>'rgba(0, 205, 255, 0.7)',
 			'backgroundColor' => 'rgba(0, 205, 255, 0.1)',
 			'datalabels' => [
 				'color' => 'black',
-
-				'align' => 'center',
+				'anchor' => 'end',
+				'align' => 'top',
 				'labels' => [
 					'title' => [
 						'font'=> [
@@ -240,8 +238,6 @@ class PanelController extends Controller
 					'gridLines' => ['display' => false],
 					'ticks'=> [
 						'fontSize'=> 12,
-						'minRotation'=> 90,
-						'maxRotation'=> 90
 					]
 				]],
 			],

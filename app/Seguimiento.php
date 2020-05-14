@@ -25,6 +25,12 @@ class Seguimiento extends Model
 		->whereNotNull('atendio_contacto');
 	}
 
+	public function scopeAtendio($query)
+	{
+		return $this
+		->where('atendio_contacto',1);
+	}
+
 	public function scopeUltimaCarga($query)
 	{
 		$ultimo_seguimiento = $this->all();

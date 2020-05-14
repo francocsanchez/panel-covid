@@ -3,10 +3,16 @@
 @section('content')
 <section class="panel-container">
 	<div class="container">
-		<h1 class="display-4">PACIENTES</h1>
+		<div class="title">
+			<h1 class="display-4">PACIENTES</h1>
+			<p>CON DATOS COMPLETOS</p>
+		</div>
 		<div class="row">
 			<div class="col">
-				<h4><em>EDAD</em></h4>
+				<div class="title-charts">
+					<h4>EDAD</h4>
+					<p>Cantidad de pacientes según edad</p>
+				</div>
 				<div style="width: 100%">
 					{!! $edadChart->container() !!}
 				</div>
@@ -16,7 +22,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h4><em>LOCALIDAD</em></h4>
+				<div class="title-charts">
+					<h4>DISTRIBUCIÓN</h4>
+					<p>Cantidad de pacientes por localidad</p>
+				</div>
 				<div style="width: 100%">
 					{!! $localidadChart->container() !!}
 				</div>
@@ -25,16 +34,26 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-6">
-				<h4 class="text-center"><em>MOTIVOS DE CONTAGIO</em></h4>
-				<div style="width: 100%">
-					{!! $motivoChart->container() !!}
+			<div class="col">
+				<div class="title-charts">
+					<h4>FUENTE</h4>
+					<p>Origen del dato</p>
 				</div>
-			</div>
-			<div class="col-6">
-				<h4 class="text-center"><em>FUENTE</em></h4>
 				<div style="width: 100%">
 					{!! $fuenteChart->container() !!}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="title-charts">
+					<h4>MOTIVOS DEL CONTACTO</h4>
+					<p>Razón por la que se realiza el seguimiento</p>
+				</div>
+				<div style="width: 100%">
+					{!! $motivoChart->container() !!}
 				</div>
 			</div>
 		</div>
