@@ -51,12 +51,38 @@ class Paciente extends Model
 
 	public function scopeCantidadLocalidad($query)
 	{
-		$data = $this
+		$data = $query
 		->leftJoin('localidades', 'localidades.localidades_id', '=', 'pacientes.localidad')
 		->select('localidades.nombre',DB::raw('count(*) as localidad_cantidad, pacientes.localidad'))
 		->orderBy('localidad_cantidad')
 		->whereNotNull('localidades.nombre')
 		->groupBy('localidad')
+		->get();
+
+		return $data;
+	}
+
+	public function scopeCantidadMotivo($query)
+	{
+		$data = $query
+		->leftJoin('motivos', 'motivos.motivos_id', '=', 'pacientes.motivo')
+		->select('motivos.nombre',DB::raw('count(*) as motivo_cantidad, pacientes.motivo'))
+		->orderBy('motivo_cantidad')
+		->whereNotNull('motivos.nombre')
+		->groupBy('motivo')
+		->get();
+
+		return $data;
+	}
+
+	public function scopeCantidadFuente($query)
+	{
+		$data = $query
+		->leftJoin('fuentes', 'fuentes.fuentes_id', '=', 'pacientes.fuente')
+		->select('fuentes.nombre',DB::raw('count(*) as fuente_cantidad, pacientes.fuente'))
+		->orderBy('fuente_cantidad')
+		->whereNotNull('fuentes.nombre')
+		->groupBy('fuente')
 		->get();
 
 		return $data;

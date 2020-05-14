@@ -34,6 +34,7 @@
 				<p class="text-right"><small><em>Porcentaje de error <strong>{{efectidad($cant_pacientes,$cant_pacientes_incompletos)}}</strong></em></small></p>
 			</div>
 		</div>
+		<p><a href="{{ route('pacientes-panel') }}">Ver Graficos</a></p>
 		<hr>
 	</div>
 </section>
