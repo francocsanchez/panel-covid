@@ -134,7 +134,7 @@ class PanelController extends Controller
 			'layout' => [
 				'padding'=> [
 					'left' => 0,
-					'right'=> 0,
+					'right'=> 10,
 					'top'=> 19,
 					'bottom'=> 0
 				]
