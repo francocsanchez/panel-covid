@@ -56,7 +56,7 @@ class Paciente extends Model
 		$data = $query
 		->leftJoin('localidades', 'localidades.localidades_id', '=', 'pacientes.localidad')
 		->select('localidades.nombre',DB::raw('count(*) as localidad_cantidad, pacientes.localidad'))
-		->orderBy('localidad_cantidad')
+		->orderBy('localidades.nombre')
 		->whereNotNull('localidades.nombre')
 		->groupBy('localidad')
 		->get();

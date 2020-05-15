@@ -99,7 +99,7 @@ class PanelController extends Controller
 
 		$localidadChart = new PacienteLocalidadChart;
 		$localidadChart->labels($labels2);
-		$localidadChart->dataset('Cantidad', 'line', $dataset2)->options([
+		$localidadChart->dataset('Cantidad', 'bar', $dataset2)->options([
 			'borderColor'=>'rgba(255,0,0, 0.7)',
 			'backgroundColor' => 'rgba(255,0,0, 0.1)',
 			'datalabels' => [
