@@ -32,7 +32,7 @@ class PanelController extends Controller
 				'ultima_carga',
 				'seguimientos',
 				'seguimientos_respuesta',
-				'seguimientos_sin_respuesta',
+				'seguimientos_sin_respuesta'
 			));
 	}
 
