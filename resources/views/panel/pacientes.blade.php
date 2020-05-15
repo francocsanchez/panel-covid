@@ -11,7 +11,7 @@
 			<div class="col">
 				<div class="title-charts">
 					<h4>EDAD</h4>
-					<p>Cantidad de pacientes según edad</p>
+					<p>Cantidad de pacientes según edad <br> <span>{{$cant}} Pacientes</span></p>
 				</div>
 				<div style="width: 100%">
 					{!! $edadChart->container() !!}
@@ -24,7 +24,7 @@
 			<div class="col">
 				<div class="title-charts">
 					<h4>DISTRIBUCIÓN</h4>
-					<p>Cantidad de pacientes por localidad</p>
+					<p>Cantidad de pacientes por localidad <br> <span>{{$cant}} Pacientes</span></p>
 				</div>
 				<div style="width: 100%">
 					{!! $localidadChart->container() !!}
@@ -37,7 +37,7 @@
 			<div class="col">
 				<div class="title-charts">
 					<h4>FUENTE</h4>
-					<p>Origen del dato</p>
+					<p>Origen del dato <br> <span>{{$cant}} Pacientes</span></p>
 				</div>
 				<div style="width: 100%">
 					{!! $fuenteChart->container() !!}
@@ -50,7 +50,7 @@
 			<div class="col">
 				<div class="title-charts">
 					<h4>MOTIVOS DEL CONTACTO</h4>
-					<p>Razón por la que se realiza el seguimiento</p>
+					<p>Razón por la que se realiza el seguimiento <br> <span>{{$cant}} Pacientes</span></p>
 				</div>
 				<div style="width: 100%">
 					{!! $motivoChart->container() !!}

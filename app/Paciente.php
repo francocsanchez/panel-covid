@@ -28,7 +28,9 @@ class Paciente extends Model
 		->whereNotNull('localidad')
 		->whereNotNull('telefono')
 		->whereNotNull('efector')
-		->whereNotNull('financiador');
+		->whereNotNull('financiador')
+		->whereNotNull('fuente')
+		->whereNotNull('motivo');
 	}
 
 	public function scopeUltimaCarga($query)

@@ -63,11 +63,19 @@ class PanelController extends Controller
 					'display'=>true,
 					'ticks'=> ['beginAtZero'=> true],
 					'gridLines'=> ['display'=> true],
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Cantidades'
+					]
 				]],
 				'xAxes'=> [[
 					'display'=>true,
 					'categoryPercentage'=> 0.55,
 					'barPercentage' => 0.5,
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Edades'
+					],
 					'ticks' => [
 						'beginAtZero' => true,
 						'fontSize'=> 12],
@@ -118,6 +126,10 @@ class PanelController extends Controller
 					'display'=>true,
 					'ticks'=> ['beginAtZero'=> true],
 					'gridLines'=> ['display'=> false],
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Cantidad'
+					]
 				]],
 				'xAxes'=> [[
 					'display'=>true,
@@ -126,8 +138,12 @@ class PanelController extends Controller
 					'gridLines' => ['display' => false],
 					'ticks'=> [
 						'fontSize'=> 12,
-						'minRotation'=> 90,
-						'maxRotation'=> 90
+						'minRotation'=> 80,
+						'maxRotation'=> 80
+					],
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Localidades'
 					]
 				]],
 			],
@@ -230,12 +246,20 @@ class PanelController extends Controller
 					'display'=>true,
 					'ticks'=> ['beginAtZero'=> true],
 					'gridLines'=> ['display'=> false],
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Cantidades'
+					]
 				]],
 				'xAxes'=> [[
 					'display'=>true,
 					'categoryPercentage'=> 0.5,
 					'barPercentage' => 1,
 					'gridLines' => ['display' => false],
+					'scaleLabel' => [
+						'display'=> true,
+						'labelString' =>'Fuentes de ingreso'
+					],
 					'ticks'=> [
 						'fontSize'=> 12,
 					]
@@ -251,7 +275,16 @@ class PanelController extends Controller
 			]
 		]);
 
-		return view('panel.pacientes',compact('edadChart','localidadChart','motivoChart','fuenteChart'));
+		$cant = Paciente::Completos()->count();
+
+		return view('panel.pacientes'
+			,compact(
+				'edadChart',
+				'localidadChart',
+				'motivoChart',
+				'fuenteChart',
+				'cant'
+			));
 
 	}
 }
