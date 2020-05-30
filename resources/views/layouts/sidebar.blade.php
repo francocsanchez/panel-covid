@@ -2,7 +2,7 @@
 	<nav id="compactSidebar">
 		<ul class="menu-categories">
 			<li class="menu active">
-				<a href="partessalud.html" data-active="true" class="menu-toggle">
+				<a href="{{ route('parte-prensa') }}" data-active="true" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
@@ -24,7 +24,7 @@
 				</svg>
 			</li>
 			<li class="menu">
-				<a href="partessalud.html" data-active="false" class="menu-toggle">
+				<a href="{{ route('parte-salud') }}" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
@@ -46,7 +46,7 @@
 				</svg>
 			</li>
 			<li class="menu">
-				<a href="seguimientocuarentena.html" data-active="false" class="menu-toggle">
+				<a href="{{ route('seguimiento-cuarentena') }}" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
@@ -67,7 +67,7 @@
 				</svg>
 			</li>
 			<li class="menu">
-				<a href="internacionesyplazas.html" data-active="false" class="menu-toggle">
+				<a href="{{ route('internaciones-plazas') }}" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
 							<img src="{{ asset('test/assets/img/icons/hospitales.svg') }}" class="navbar-logo" alt="logo" style="width:45px; height:45px;">
@@ -79,7 +79,7 @@
 				</svg>
 			</li>
 			<li class="menu">
-				<a href="numerosglobales.html" data-active="false" class="menu-toggle">
+				<a href="{{ route('numeros-globales') }}" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
