@@ -1,8 +1,6 @@
 @extends('layouts.app-2')
 
 @section('content')
-
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
         <div class="row layout-top-spacing">
@@ -1998,6 +1996,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- END MAIN CONTAINER -->
-
-                            @endsection
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
