@@ -16,6 +16,3 @@ Route::get('/parte-salud','PagesController@parteSalud')->name('parte-salud');
 Route::get('/seguimiento-cuarentena','PagesController@seguimientoCuarentena')->name('seguimiento-cuarentena');
 Route::get('/internaciones-plazas','PagesController@internacionesPlazas')->name('internaciones-plazas');
 Route::get('/numeros-globales','PagesController@numerosGlobales')->name('numeros-globales');
-
-Route::get('/panel','PanelController@index')->name('panel');
-Route::get('/pacientes','PanelController@pacientes')->name('pacientes-panel');
