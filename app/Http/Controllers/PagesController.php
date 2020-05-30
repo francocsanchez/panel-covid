@@ -10,4 +10,18 @@ class PagesController extends Controller
 	{
 		return view('welcome');
 	}
+
+	public function parteSalud()
+	{
+		return "Parte-Salud";
+	}
+
+	public function seguimientoCuarentena()
+	{
+		return "Seguimiento-Cuarentena";
+	}
+
+	public function internacionesPlazas()
+		return "Numeros-Globales";
+	}
 }
