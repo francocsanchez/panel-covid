@@ -299,11 +299,11 @@ class PagesController extends Controller
 
 	public function internacionesPlazas()
 	{
-		return "Internaciones-Plazas";
+		return view('pages.internaciones-plazas');
 	}
 
 	public function numerosGlobales()
 	{
-		return "Numeros-Globales";
+		return view('pages.numeros-globales');
 	}
 }
