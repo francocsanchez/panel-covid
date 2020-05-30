@@ -22,6 +22,12 @@ class PagesController extends Controller
 	}
 
 	public function internacionesPlazas()
+	{
+		return "Internaciones-Plazas";
+	}
+
+	public function numerosGlobales()
+	{
 		return "Numeros-Globales";
 	}
 }
