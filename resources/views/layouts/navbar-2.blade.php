@@ -2,7 +2,7 @@
     <header class="header navbar navbar-expand-sm">
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
-                <a href="index.html">
+                <a href="{{ route('parte-prensa') }}">
                     <img src="{{ asset('test/assets/img/logo.png') }}" class="navbar-logo" alt="logo">
                 </a>
             </li>
