@@ -4,7 +4,7 @@ use Carbon\Carbon;
 
 function efectidad($total,$valor){
 	$efectividad = ($valor / $total) *100;
-	$efectividad = number_format($efectividad, 0, '.', '') . '%';
+	$efectividad = number_format($efectividad, 0, '.', '');
 
 	return $efectividad;
 }
@@ -18,7 +18,7 @@ function tipoSexo($valor){
 }
 
 function fechaCarga($fecha){
-	return Carbon::parse($fecha)->format('d-m-Y H:i');
+	return Carbon::parse($fecha)->format('d/m/Y H:i');
 }
 
 ?>
