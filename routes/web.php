@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/','PagesController@home')->name('home');
 Route::get('/panel','PanelController@index')->name('panel');
 Route::get('/pacientes','PanelController@pacientes')->name('pacientes-panel');
