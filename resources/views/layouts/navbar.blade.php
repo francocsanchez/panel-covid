@@ -3,7 +3,7 @@
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
                 <a href="{{ route('parte-prensa') }}">
-                    <img src="{{ asset('test/assets/img/logo.png') }}" class="navbar-logo" alt="logo">
+                    <img src="{{ asset('img/logo.png') }}" class="navbar-logo" alt="logo">
                 </a>
             </li>
         </ul>

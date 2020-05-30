@@ -70,7 +70,7 @@
 				<a href="{{ route('internaciones-plazas') }}" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
-							<img src="{{ asset('test/assets/img/icons/hospitales.svg') }}" class="navbar-logo" alt="logo" style="width:45px; height:45px;">
+							<img src="{{ asset('img/icons/hospitales.svg') }}" class="navbar-logo" alt="logo" style="width:45px; height:45px;">
 						</div>
 						<span>Internaciones<br>y Plazas</span>
 					</div>
