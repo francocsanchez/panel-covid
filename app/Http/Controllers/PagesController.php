@@ -8,12 +8,12 @@ class PagesController extends Controller
 {
 	public function home()
 	{
-		return view('welcome');
+		return view('pages.parte-prensa');
 	}
 
 	public function parteSalud()
 	{
-		return "Parte-Salud";
+		return view('pages.parte-salud');
 	}
 
 	public function seguimientoCuarentena()
